@@ -67,8 +67,8 @@
             <div class="flex flex-wrap">
                 <div class="w-full self-center px-4 lg:w-1/2">
                     <h1 class="text-base font-semibold text-primary md:text-xl">Hello World 👋, I am <span
-                            class="block font-bold text-dark text-4xl lg:text-5xl lg:mb-2">Rifqi jabrah rhae</span></h1>
-                    <h2 class="font-medium text-secondary text-lg mb-5">Student & <span class="text-dark kata"></span></h2>
+                            class="block font-bold text-dark text-4xl lg:text-5xl lg:mb-2 rifqi"></span></h1>
+                    <h2 class="font-medium text-secondary text-lg mb-5">Student & <span class="text-dark" id="kata"></span></h2>
                     <p class="font-medium text-slate-400 mb-10 leading-relaxed">Tidak tau mau bikin apa, jadi belajar
                         bikin <span class="text-primary font-bold">Portofolio</span> sambil belajar <span
                             class="text-sky-500 font-bold">Tailwind</span> saja</p>
@@ -545,7 +545,37 @@
     <script>
         gsap.registerPlugin(TextPlugin);
         
-        gsap.to('.kata', {duration: 2, delay: 0.5, text: 'Genshin Player'})
+        gsap.to('.rifqi', {duration: 2, delay: 0, text: 'Rifqi Jabrah Rhae'})
+
+        const words = ["Genshin Player", "Mobile legends player", "Clash of Clans player", "Diva's Lover  "];
+        let i = 0;
+        let j = 0;
+        let currentWord = "";
+        let isDeleting = false;
+
+        function type() {
+        currentWord = words[i];
+        if (isDeleting) {
+            document.getElementById("kata").textContent = currentWord.substring(0, j-1);
+            j--;
+            if (j == 0) {
+            isDeleting = false;
+            i++;
+            if (i == words.length) {
+                i = 0;
+            }
+            }
+        } else {
+            document.getElementById("kata").textContent = currentWord.substring(0, j+1);
+            j++;
+            if (j == currentWord.length) {
+            isDeleting = true;
+            }
+        }
+        setTimeout(type, 100);
+        }
+
+        type();
     </script>
 </body>
 
