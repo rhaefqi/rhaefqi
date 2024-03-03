@@ -1,5 +1,6 @@
 //navbar fixed
-window.onscroll = function(){
+/* fungsi tidak berguna karna patah patah cari tau kenapa jadi patah patah lalu perbaiki */
+/* window.onscroll = function(){
     const header = document.querySelector('header');
     const fixedNav = header.offsetTop;
 
@@ -8,7 +9,7 @@ window.onscroll = function(){
     }else{
         header.classList.remove('navbar-fixed');
     }
-}
+} */
 
 //hamburger
 const hamburger = document.querySelector('#hamburger');
