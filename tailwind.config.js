@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./public/**/*.{html,js}', './*.{html,js}'],
+  content: ['./public/**/*.{html,js}', './*.{html,js}', './tailwind-components/*.{html, js}'],
   darkMode: 'class',
   theme: {
     container: {
@@ -15,7 +15,10 @@ module.exports = {
       },
       screens: {
         '2xl': '1320px'
-      }
+      },
+      fontFamily: {
+        'jakarta' : ['Plus Jakarta Sans', 'sans-serif']
+      },
     },
   },
   plugins: [],
