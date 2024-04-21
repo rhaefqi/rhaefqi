@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../public/style.css" />
+	<title>Regular Expressions</title>
+</head>
+
+<body class="bg-slate-300">
+	<section class="max-w-screen-xl flex flex-col gap-y-20 items-center justify-center my-10 py-10 px-5 mx-auto bg-white rounded-lg shadow-lg">
+		<span class="text-xl text-slate-500 font-bold -mt-9 -mb-16 ">
+			Regular Expression 
+		</span>
+		<div class="relative w-full">
+			<input id="angka" type="text" name="angka" placeholder="Hanya bisa angka" value="" class="relative w-full h-12 px-4 placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white focus:border-blue-500" />
+			<label for="angka" id="legend-angka" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:rounded before:bordered before:border-blue-500 before:transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-xs peer-focus:text-blue-500 "> Hanya bisa angka</label>
+			<small class="absolute flex justify-between w-full px-4 py-1 text-xs transition">
+				<span id="angka-validation" class="text-slate-400">Validation message</span>
+			</small>
+		</div>		
+
+		<div class="relative w-full">
+			<input id="hp" type="text" name="hp" placeholder="No hp dengan awalan 08 dan berjumlah 12 angka" value="" class="relative w-full h-12 px-4 placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white focus:border-blue-500" />
+			<label for="hp" id="legend-hp" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-xs peer-focus:text-blue-500 "> No hp dengan awalan 08 dan berjumlah 12 angka </label>
+			<small class="absolute flex justify-between w-full px-4 py-1 text-xs transition">
+				<span id="hp-validation" class="text-slate-400">Validation message</span>
+			</small>
+		</div>		
+
+		<div class="relative w-full">
+			<input id="nos" type="text" name="nos" placeholder="spasi diganti underscore(_)" value="" class="relative w-full h-12 px-4 placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white focus:border-blue-500" />
+			<label for="nos" id="legend-nos" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-xs peer-focus:text-blue-500 ">spasi diganti underscore(_) </label>
+			<small class="absolute flex justify-between w-full px-4 py-1 text-xs transition">
+				<span id="nos-validation" class="text-slate-400">Validation message</span>
+			</small>
+		</div>		
+
+		<div class="relative w-full">
+			<input id="hxh" type="text" name="hxh" placeholder="Kalimat apa aja yang penting ada kata "hxh mid" nya" value="" class="relative w-full h-12 px-4 placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white focus:border-blue-500" />
+			<label for="hxh" id="legend-hxh" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-xs peer-focus:text-blue-500 "> Kalimat apa aja yang penting ada kata "hxh mid" nya </label>
+			<small class="absolute flex justify-between w-full px-4 py-1 text-xs transition">
+				<span id="hxh-validation" class="text-slate-400">Validation message</span>
+			</small>
+		</div>		
+
+		<div class="relative w-full">
+			<input id="gform" type="text" name="gform" placeholder="Masukan link google form" value="" class="relative w-full h-12 px-4 placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white focus:border-blue-500" />
+			<label for="gform" id="legend-gform" class="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-xs peer-focus:text-blue-500 "> Masukan link google form </label>
+			<small class="absolute flex justify-between w-full px-4 py-1 text-xs transition">
+				<span id="gform-validation" class="text-slate-400">Validation message</span>
+			</small>
+		</div>		
+	</section>
+	<script src="regex.js"></script>
+</body>
+
+</html>
